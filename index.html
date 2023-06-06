@@ -5,120 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Hospital</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#doctors">Doctors</a></li>
-                    <li><a href="#appointments">Appointments</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#help">Help</a></li> <!-- Added Help link -->
-                    <li><a href="#about">About Us</a></li> <!-- Added About Us link -->
-               
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#home">Smart Hospital</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#appointments">Appointments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#help">Help</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+
     <main>
-        <section id="home">
+        <section id="home" class="py-5">
             <div class="container">
-                <h1>Welcome to Smart Hospital</h1>
-                <img src="images/smart-hospital.jpg" alt="Hospital">
-                <p>Smart Hospital is a state-of-the-art healthcare facility that leverages cutting-edge technology to provide exceptional patient care.</p>
+                <h1 class="text-center">Welcome to Smart Hospital</h1>
+                <img src="images/smart-hospital.jpg" alt="Hospital" class="img-fluid rounded mx-auto d-block my-4">
+                <p class="text-center">Smart Hospital is a state-of-the-art healthcare facility that leverages cutting-edge technology to provide exceptional patient care.</p>
             </div>
         </section>
-        <section id="services">
+        <section id="services" class="py-5 bg-light">
             <div class="container">
-                <h2>Our Services</h2>
-                <ul>
-                    <li>Emergency Care</li>
-                    <li>Outpatient Services</li>
-                    <li>Specialty Clinics</li>
-                    <li>Diagnostic Services</li>
-                    <li>Telemedicine</li>
+                <h2 class="text-center mb-4">Our Services</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Emergency Care</li>
+                    <li class="list-group-item">Outpatient Services</li>
+                    <li class="list-group-item">Specialty Clinics</li>
+                    <li class="list-group-item">Diagnostic Services</li>
+                    <li class="list-group-item">Telemedicine</li>
                 </ul>
             </div>
         </section>
-        <section id="doctors">
+        <section id="doctors" class="py-5">
             <div class="container">
-                <h2>Meet Our Doctors</h2>
-                <div class="doctor">
-                    <img src="images/doctor1.jpg" alt="Doctor 1">
-                    <h3>Dr. Ayesha</h3>
-                    <p>Cardiologist</p>
+                <h2 class="text-center mb-4">Meet Our Doctors</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mb-4">
+                            <img src="images/doctor1.jpg" alt="Doctor 1" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. John Smith</h5>
+                                <p class="card-text">Cardiologist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mb-4">
+                            <img src="images/doctor2.jpg" alt="Doctor 2" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Emily Johnson</h5>
+                                <p class="card-text">Pediatrician</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mb-4">
+                            <img src="images/doctor3.jpg" alt="Doctor 3" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Michael Williams</h5>
+                                <p class="card-text">Surgeon</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="doctor">
-                    <img src="images/doctor2.jpg" alt="Doctor 2">
-                    <h3>Dr. Ahmed</h3>
-                    <p>Neurologist</p>
-                </div>
-                <!-- Add more doctor profiles here -->
             </div>
         </section>
-        <section id="appointments">
-            <div class="container">
-                <h2>Book an Appointment</h2>
-                <form action="submit-appointment.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <br>
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <br>
-                    <label for="date">Preferred Date:</label>
-                    <input type="date" id="date" name="date" required>
-                    <br>
-                    <label for="time">Preferred Time:</label>
-                    <input type="time" id="time" name="time" required>
-                    <br>
-                    <label for="doctor">Preferred Doctor:</label>
-                    <select id="doctor" name="doctor" required>
-                        <option value="Dr. Ayesha">Dr. Ayesha</option>
-                        <option value="Dr. Ahmed">Dr. Ahmed</option>
-                        <!-- Add more doctors here -->
-                    </select>
-                    <br>
-                    <input id="submit" type="submit" value="Submit">
-                </form>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>Address: 123 Smart Hospital Street, City, State, ZIP</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: info@smarthospital.com</p>
-            </div>
-        </section>
-        <section id="help">
-            <div class="container">
-                <h2>Help</h2>
-                <p>If you need any assistance or have any questions, please feel free to contact our support team.</p>
-                <p>Phone: (555) 123-7890</p>
-                <p>Email: support@smarthospital.com</p>
-            </div>
-        </section>
-        <section id="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>Smart Hospital is a state-of-the-art healthcare facility that leverages cutting-edge technology to provide exceptional patient care. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum elit quis mauris pellentesque, eget ullamcorper est mollis.</p>
-            </div>
-        </section>
+        <!-- Add more sections as needed -->
     </main>
-    <footer>
+
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <p>&copy; 2023 Smart Hospital. All rights reserved.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About Smart Hospital</h5>
+                    <p>Smart Hospital is committed to providing excellent healthcare services using advanced technology and a compassionate approach.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#services" class="text-white">Services</a></li>
+                        <li><a href="#doctors" class="text-white">Doctors</a></li>
+                        <li><a href="#appointments" class="text-white">Appointments</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <address>
+                        123 Main St<br>
+                        City, State<br>
+                        Country<br>
+                        <i class="fa fa-phone"></i> 123-456-7890<br>
+                        <i class="fa fa-envelope"></i> info@example.com
+                    </address>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS (Make sure to include jQuery and Popper.js before this) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
